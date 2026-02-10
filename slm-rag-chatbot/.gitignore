@@ -1,5 +1,8 @@
-venv/ 
-*.pyc 
-.env 
-models/*.bin 
-data/raw/* 
+venv/
+*.pyc
+.env
+models/
+data/raw/*
+__pycache__/
+*.log
+
