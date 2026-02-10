@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from src.core.vector_store import VectorStore
-from src.core.generator_template import TemplateGenerator
+from src.core.generator_modal import ModalGenerator
 
 app = FastAPI(title="SLM RAG Chatbot API")
 
@@ -16,7 +16,7 @@ app.add_middleware(
 
 # Initialize components
 retriever = VectorStore()
-generator = TemplateGenerator()
+generator = ModalGenerator()
 
 class Query(BaseModel):
     question: str
